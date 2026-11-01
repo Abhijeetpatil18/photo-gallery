@@ -125,7 +125,7 @@ export default function App() {
     setError(null)
 
     try {
-      const res = await fetch(`/api/picsum/v2/list?page=${pageNum}&limit=${PAGE_LIMIT}`)
+      const res = await fetch(`https://picsum.photos/v2/list?page=${pageNum}&limit=${PAGE_LIMIT}`)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const data = await res.json()
 
